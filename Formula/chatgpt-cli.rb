@@ -5,20 +5,20 @@
 class ChatgptCli < Formula
   desc "Recursively expand archives containing other archives"
   homepage "https://github.com/duanemay/homebrew-tap"
-  version "1.4.0"
+  version "1.6.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.4.0/chatgpt-cli_Darwin_arm64.tar.gz"
-      sha256 "80929d72da018698dd7b33e3ea182da85f3204459916750ae876a1659e5c8031"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.6.0/chatgpt-cli_Darwin_arm64.tar.gz"
+      sha256 "e534db39bbc7750a5a18913fccdada5ddbfadbc847bab4aa625c126e341bc0fe"
 
       def install
         bin.install "chatgpt-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.4.0/chatgpt-cli_Darwin_x86_64.tar.gz"
-      sha256 "988f0c916123e39d490b1afe229c522a102f21a27674cf38a0baf3dd064f2c19"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.6.0/chatgpt-cli_Darwin_x86_64.tar.gz"
+      sha256 "55380285803bf011058c4b67b5d88954ea5857d02ac1df7efbf81fbd4c258c9a"
 
       def install
         bin.install "chatgpt-cli"
@@ -28,16 +28,16 @@ class ChatgptCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.4.0/chatgpt-cli_Linux_arm64.tar.gz"
-      sha256 "b4b0537188a445f3a9d132b4bc214b1ddab8d2ff5860231c25ae01b0bc508ac7"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.6.0/chatgpt-cli_Linux_arm64.tar.gz"
+      sha256 "a58a3f9ccd731441e792ed9bc4439da8163b3c8fb601fa897221ffd775c52c73"
 
       def install
         bin.install "chatgpt-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.4.0/chatgpt-cli_Linux_x86_64.tar.gz"
-      sha256 "cb7199a60b5afde0c855f326d661b58c3e8360e7e942dddd8418e068dd130b11"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v1.6.0/chatgpt-cli_Linux_x86_64.tar.gz"
+      sha256 "4ff705e42b4c2e8f9e553bb734783a82dbd6f8e6e07398d57d5cba11b7fee8c6"
 
       def install
         bin.install "chatgpt-cli"
