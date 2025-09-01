@@ -2,33 +2,35 @@
 cask "chatgpt-cli" do
   desc "ChatGPT Command-Line Interface"
   homepage "https://github.com/duanemay/homebrew-tap"
-  version "2.2.2"
+  version "2.2.3"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
-  binary "chatgpt-cli"
-
   on_macos do
     on_intel do
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.2/chatgpt-cli_Darwin_x86_64.tar.gz"
-      sha256 "6a4c66c05555bbc7b553084c9fc8f9adb5776de98c69b2418bfa139cfdcd3823"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.3/chatgpt-cli_darwin_x86_64"
+      sha256 "353347d8f4f66e5be65b2a6f26931482a3646c2d66387adf67caddbd4f87e4b9"
+      binary "chatgpt-cli_darwin_x86_64", target: "chatgpt-cli"
     end
     on_arm do
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.2/chatgpt-cli_Darwin_arm64.tar.gz"
-      sha256 "9246379780efd0f374abfce5f5d8c04743538280be4f13e2327cbed8fe8028e6"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.3/chatgpt-cli_darwin_arm64"
+      sha256 "62457aaa188d4c0dca4f593cf06230c7518b7bbeb9048412b1b8517b1712c4eb"
+      binary "chatgpt-cli_darwin_arm64", target: "chatgpt-cli"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.2/chatgpt-cli_Linux_x86_64.tar.gz"
-      sha256 "11b990324d946abca7aa3f2249ae08339b59b5d42950c987d9102b49769cb431"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.3/chatgpt-cli_linux_x86_64"
+      sha256 "5bd251a8199c2be503a49dedf65f839a3d06d2c3d3c3ee4251601f06ab3bb138"
+      binary "chatgpt-cli_linux_x86_64", target: "chatgpt-cli"
     end
     on_arm do
-      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.2/chatgpt-cli_Linux_arm64.tar.gz"
-      sha256 "f5f3a021095a3a0e526e8308167e8f15eee75b39c6d78a028ec5d97f0dc48af1"
+      url "https://github.com/duanemay/chatgpt-cli/releases/download/v2.2.3/chatgpt-cli_linux_arm64"
+      sha256 "db26bdf229923009e037f4585b5629c0d7f9a645447b83ee600208f35ba834ca"
+      binary "chatgpt-cli_linux_arm64", target: "chatgpt-cli"
     end
   end
 
