@@ -16,8 +16,8 @@ Whenever a brew install foo command is issued, brew selects which formula to use
 * other taps
 
 
-    brew install chatgpt-cli
+    brew install --cask chatgpt-cli
 
 If you need a formula to be installed from a particular tap, you can use fully qualified names to refer to them.
 
-    brew install duanemay/tap/chatgpt-cli
+    brew install --cask duanemay/tap/chatgpt-cli
