@@ -6,7 +6,7 @@ class ChatgptCli < Formula
   desc "Recursively expand archives containing other archives"
   homepage "https://github.com/duanemay/homebrew-tap"
   version "2.2.2"
-  disable! date: "2025-09-01", because: "the cask should be used now instead", replacement_cask: "chatgpt-cli"
+  disable! date: "2025-09-12", because: "has been replaced by the cask, which should be used now instead", replacement_cask: "chatgpt-cli"
 
   on_macos do
     if Hardware::CPU.intel?
