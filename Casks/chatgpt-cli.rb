@@ -3,7 +3,7 @@ cask "chatgpt-cli" do
   name "chatgpt-cli"
   desc "ChatGPT Command-Line Interface"
   homepage "https://github.com/duanemay/homebrew-tap"
-  version "2.3.0"
+  version "2.3.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,12 +12,12 @@ cask "chatgpt-cli" do
   on_macos do
     on_intel do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_darwin_x86_64"
-      sha256 "0b3d473d750f7879d7e807b8ffe9a7d28791076fa57ee809c163c799c8c976f3"
+      sha256 "8fa3710de73e70884193357a10e30bc39d122407b533f83da7d5b72eb97b82c3"
       binary "chatgpt-cli_darwin_x86_64", target: "chatgpt-cli"
     end
     on_arm do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_darwin_arm64"
-      sha256 "e1f2b5e96237e4fa3bf148045d650240ae5b3b48b91353af8ce11c69b000695e"
+      sha256 "d4aed8be16804c3a2ffb58d5215d743b1f7b2055fb22170f96f9649153639124"
       binary "chatgpt-cli_darwin_arm64", target: "chatgpt-cli"
     end
   end
@@ -25,19 +25,25 @@ cask "chatgpt-cli" do
   on_linux do
     on_intel do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_linux_x86_64"
-      sha256 "f898131d6ce5d1b394bfd17f8176ba5d25205f1810d399bc9900028ad9fda0b8"
+      sha256 "61cc041d8cf51438011cec55b757083579e09517875e1cff9d8b824104f2227c"
       binary "chatgpt-cli_linux_x86_64", target: "chatgpt-cli"
     end
     on_arm do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_linux_arm64"
-      sha256 "6e91b8f527f758e46eca562c2209275bd4fea30ee3a7d64bf2c384b6ee1bb4ef"
+      sha256 "9128f56d8c71f1c0682f0bd79899983cb4d8f17eb555011814b9e03a7454e55f"
       binary "chatgpt-cli_linux_arm64", target: "chatgpt-cli"
     end
   end
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/chatgpt-cli"]
+     arch = Hardware::CPU.arch
+     binary_name = if arch == :arm64
+       "chatgpt-cli_darwin_arm64"
+      else
+        "chatgpt-cli_darwin_x86_64"
+      end
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/#{binary_name}"]
     end
   end
 
