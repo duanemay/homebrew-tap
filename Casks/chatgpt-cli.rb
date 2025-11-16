@@ -3,7 +3,7 @@ cask "chatgpt-cli" do
   name "chatgpt-cli"
   desc "ChatGPT Command-Line Interface"
   homepage "https://github.com/duanemay/homebrew-tap"
-  version "2.3.2"
+  version "2.3.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,12 +12,12 @@ cask "chatgpt-cli" do
   on_macos do
     on_intel do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_darwin_x86_64"
-      sha256 "200c011705520a0c5d212222b3fa84f1b718a1a91d02eda3b1790cc83bc1f64d"
+      sha256 "2bd3b5877e8c1128a06ed9f4396ddd933b6963b0fd962cf80fa3c756ec050d67"
       binary "chatgpt-cli_darwin_x86_64", target: "chatgpt-cli"
     end
     on_arm do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_darwin_arm64"
-      sha256 "8e2d777663af8e5789ff0e54c2458f4c43700e199cd9f208b8f0672cc7917900"
+      sha256 "9230a2c58c1d408905ea9f461deea9e4224117c3948a149be9c997c0e34cd6c6"
       binary "chatgpt-cli_darwin_arm64", target: "chatgpt-cli"
     end
   end
@@ -25,12 +25,12 @@ cask "chatgpt-cli" do
   on_linux do
     on_intel do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_linux_x86_64"
-      sha256 "7814c118094bd26f8d45fa484bdaca9f953653bd2ebcea43af83f6a6cc04eb55"
+      sha256 "86b57705a2c086ebcb9024d0fe46e478b3c877dee33171ca9618ff470fce53b4"
       binary "chatgpt-cli_linux_x86_64", target: "chatgpt-cli"
     end
     on_arm do
       url "https://github.com/duanemay/chatgpt-cli/releases/download/v#{version}/chatgpt-cli_linux_arm64"
-      sha256 "4f19a4ea44b60257be9036f54b109fe4d4b3d3995e1ae99b766af6f462384bed"
+      sha256 "bdf721b65d779bfd6f6f22aa1ec0b92b297b040176d097c6e88ba0c72ef04187"
       binary "chatgpt-cli_linux_arm64", target: "chatgpt-cli"
     end
   end
